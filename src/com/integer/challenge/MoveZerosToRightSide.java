@@ -1,5 +1,7 @@
 package com.integer.challenge;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class MoveZerosToRightSide {
@@ -11,7 +13,16 @@ public class MoveZerosToRightSide {
 	}
 
 	private void moveZerosToRightSide(int[] nums) {
-		
+		int left = 0, right = 0;
+		while (right < nums.length) {
+			if(nums[right] != 0) {
+				int temp = nums[right];
+				nums[right] = nums[left];
+				nums[left++] = temp;
+			}
+			right++;
+		}
+		System.out.println(Arrays.toString(nums));
 	}
 
 }
