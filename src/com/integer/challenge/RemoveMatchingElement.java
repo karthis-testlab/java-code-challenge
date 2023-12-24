@@ -12,6 +12,14 @@ public class RemoveMatchingElement {
 	 * Given the integer array and the target, 
 	 * remove the matching target from the array 
 	 * 
+	 * static array and dynamic array !!
+	 * 
+	 * static array --> Length fixed --> number of elements is declared at the beginning
+	 * you cannot resize them --> resize?? --> create another array (Arrays.copyOf())
+	 * 
+	 * Dynamic array --> Array size that can change (grow or shrink)
+	 * List / Set / Map
+	 * 
 	 */
 	
 	@Test
@@ -56,9 +64,8 @@ public class RemoveMatchingElement {
 	private int[] removeMatchingElement(int[] nums, int target) {	
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] != target) {
-				list.add(nums[i]);
-			}
+			if (nums[i] != target)
+				list.add(nums[i]);			
 		}
 		
 		int[] newNumArray = new int[list.size()];
