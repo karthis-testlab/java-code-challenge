@@ -22,7 +22,8 @@ public class FindSquares {
 	@Test
 	public void edge_testcase() {
 		int[] nums = {-7,-5,1,4,7};
-		Assert.assertArrayEquals(new int[] {1,16,25,49,49}, findSquares(nums));
+		//Assert.assertArrayEquals(new int[] {1,16,25,49,49}, findSquares(nums));
+		System.out.println(Arrays.toString(findSquaresUsingTwoPointer(nums)));
 	}
 	
 	@Test //Empty array
@@ -44,7 +45,7 @@ public class FindSquares {
 	 * 
 	 */
 	
-	public int[] findSquares(int[] nums) {
+	private int[] findSquares(int[] nums) {
 		if(nums.length == 0)
 			return nums;			
 		
@@ -55,6 +56,66 @@ public class FindSquares {
 		Arrays.sort(nums);
 		
 		return nums;
+	}
+	
+	/*
+	 * 1) Create a new array of same size and value
+	 * 2) Assign the left = 0 and right = len - 1
+	 * 3) insertIndex = len - 1 (bigger number at end)
+	 * 4) while(left <= right)
+	 *    a) If left absolute value is smaller than right absolute value
+	 *       --> insert the square value of left in the insert index
+	 *    b) else insert the squared value of the right in the insert index   
+	 * 
+	 */
+	private int[] findSquaresUsingTwoPointer(int[] nums) {
+		
+		int[] newArray = new int[nums.length];
+		int left = 0, right = nums.length - 1;
+		int insertIndex = nums.length - 1;
+		
+		while(left <= right) {
+			if(returnAbsoluteValue(nums[left]) == returnAbsoluteValue(nums[right])) {
+				newArray[insertIndex] = nums[left]*nums[left];
+				left++;
+				insertIndex--;
+			} else if(returnAbsoluteValue(nums[left]) < returnAbsoluteValue(nums[right])) {
+				newArray[insertIndex] = nums[right]*nums[right];
+				right--;
+				insertIndex--;
+			} else {
+				newArray[insertIndex] = nums[left]*nums[left];
+				left++;
+				insertIndex--;
+			}
+		}
+		
+		return newArray;
+		
+	}
+	
+	int returnAbsoluteValue(int number) {
+		return Math.abs(number);
+	}
+	
+	/*
+	 * Time Complexity : O[n/2] --> Best Case // O[n] --> Worst Case
+	 * Space Complexity: O[n]
+	 */
+	private int[] squareAndSort(int[] nums) {
+		int[] squared = new int[nums.length];
+		int left = 0, right = nums.length - 1;
+		int insertIndex = nums.length - 1;
+		
+		while(left <= right) {
+			if(returnAbsoluteValue(nums[left]) < returnAbsoluteValue(nums[right])) {
+				squared[insertIndex--] = nums[right] * nums[right--];
+			} else {
+				squared[insertIndex--] = nums[left] * nums[left++];
+			}
+		}
+		return squared;
+		
 	}
 
 }

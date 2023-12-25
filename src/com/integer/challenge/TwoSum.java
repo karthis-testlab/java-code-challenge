@@ -2,7 +2,9 @@ package com.integer.challenge;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -52,11 +54,12 @@ public class TwoSum {
 
 	@Test // edge case
 	public void example3() {
-		int[] nums = {2,2,3,1,4,0,5};
-		int target = 5;// 2 + 5 = 7
+		int[] nums = {3,2};
+		int target = 6;// 2 + 5 = 7
 		//twoSum(nums, target);
-		twoSumUsing2Pointer(nums, target);
+		//twoSumUsing2Pointer(nums, target);
 		//Output --> {{0,2},{1,2},{3,4},{5,6}}
+		System.out.println(Arrays.toString(twoSumTheBestOption(nums, target)));
 	}
 
 	/*
@@ -109,9 +112,9 @@ public class TwoSum {
 	
 	private void twoSumUsing2Pointer(int[] nums, int target) {
 
-		Arrays.sort(nums);
+		//Arrays.sort(nums);
 		
-		System.out.println(Arrays.toString(nums));
+		//System.out.println(Arrays.toString(nums));
 		
 		int[] array = new int[2];
 		List<int[]> list = new ArrayList<int[]>();
@@ -146,5 +149,53 @@ public class TwoSum {
 					+ " was not found in the given integer array " + Arrays.toString(nums));
 
 	}
+	
+	/*
+	 * Time complexity: O(N);
+     * Space Complexity: O(N);
+	 */
+	public int[] twoSumBestOption(int[] nums, int target) {
+
+		Map<Integer, Integer> map = new HashMap<>();
+
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(target - nums[i])) {
+				return new int[] { map.get(target - nums[i]), i };
+			}
+			map.put(nums[i], i);
+		}
+
+		return new int[] {};
+
+    }
+	
+	/*
+	 * 
+	 * Time complexity: O(N) for Worst and Average Case
+	 * Time complexity: O(1) for Best Case
+	 * 
+	 * 
+	 * 
+	 */
+	public int[] twoSumTheBestOption(int[] nums, int target) {
+
+		Map<Integer, Integer> map = new HashMap<>();
+
+		if (nums.length == 2) {
+			if (nums[0] + nums[1] == target) {
+				return new int[] { 0, 1 };
+			}
+		}
+
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(target - nums[i])) {
+				return new int[] { map.get(target - nums[i]), i };
+			}
+			map.put(nums[i], i);
+		}
+
+		return new int[] {};
+
+	}	
 
 }
