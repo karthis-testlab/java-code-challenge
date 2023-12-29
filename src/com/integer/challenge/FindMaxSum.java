@@ -11,6 +11,13 @@ public class FindMaxSum {
 		findMaxSum(nums, k);
 	}
 	
+	@Test
+	public void example2() {
+		int[] nums = {8,4,2,3,11,15,2,1};
+		int k = 2;
+		findMaxSum(nums, k);
+	}
+	
 	
 	/*
 	 * 1) Add first k elements and have a sum
