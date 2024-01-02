@@ -16,7 +16,13 @@ public class SumDigit {
 	}
 
 	/*
-	 * 1) 
+	 * 
+	 * 1) Read (or) initialize an integer "number".
+	 * 2) Declare a variable (sum) to store the sum of numbers and initialize to 0.
+	 * 3) Find remainder by using the modulo (%) operator. It gives the last digit of the number (number).
+	 * 4) Add the last digit to the variable sum.
+	 * 5) Divide the number (number) by 10. It removes the last digit of number.
+	 * 6) Repeat the above steps (3 to 5) until the number (number) becomes 0. 
 	 * 
 	 * 
 	 */
