@@ -10,6 +10,7 @@ public class SumDigit {
 		int number = 123456;
 		System.out.println(findSumDigitUsingWhileLoop(number));
 		System.out.println(findSumDigitUsingForLoop(number));
+		System.out.println(findSumDigitUsingRecursion(number));
 		System.out.println(number/10);
 		System.out.println(number%10);
 
@@ -53,6 +54,15 @@ public class SumDigit {
 		}
 		
 		return sum;
+	}
+	
+	int findSumDigitUsingRecursion(int number) {
+		
+		if(number%10 == 0)
+			return number;
+		
+		return number == 0 ? number : number%10 + findSumDigitUsingRecursion(number/10);
+		
 	}
 
 }
