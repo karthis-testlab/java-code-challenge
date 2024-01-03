@@ -6,7 +6,7 @@ public class ReverseNumber {
 	
 	@Test
 	public void testReverseNumber() {
-		int number = 6;
+		int number = 123;
 		System.out.println(reverseNumber(number));
 	}
 
@@ -14,11 +14,9 @@ public class ReverseNumber {
 		
 		int reversedNumber = 0;
 		
-		if(number%10 == 0)
-			return number;
-		
-		while (number > 0) {			
-			reversedNumber = reversedNumber * 10 + number % 10;
+		while (number > 0) {	
+			int remainder = number % 10;
+			reversedNumber = reversedNumber * 10 + remainder;
 			number/=10;
 		}
 		
