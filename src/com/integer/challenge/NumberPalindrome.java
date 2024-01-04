@@ -7,14 +7,14 @@ public class NumberPalindrome {
 	@Test
 	public void testNumberPalindrome() {
 		System.out.println(isPalindrome(111));
-		System.out.println(isPalindrome(321));
+		System.out.println(isPalindrome(100));
 	}
 
 	int reverseNumber(int number) {
 
 		int reversedNumber = 0;
 
-		if (number % 10 == 0)
+		if (number / 10 == 0)
 			return number;
 
 		while (number > 0) {
