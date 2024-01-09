@@ -1,4 +1,4 @@
-package com.integer.challenge;
+package com.integer.challenges;
 
 public class Factorial {
 	

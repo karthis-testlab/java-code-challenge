@@ -1,4 +1,4 @@
-package com.integer.challenge;
+package com.array.challenges;
 
 import org.junit.Test;
 

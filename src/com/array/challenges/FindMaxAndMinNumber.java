@@ -1,4 +1,4 @@
-package com.integer.challenge;
+package com.array.challenges;
 
 import java.util.ArrayList;
 import java.util.Collections;

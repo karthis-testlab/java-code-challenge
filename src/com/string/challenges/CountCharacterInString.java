@@ -1,4 +1,4 @@
-package com.string.challenge;
+package com.string.challenges;
 
 import java.util.HashMap;
 import java.util.Map;

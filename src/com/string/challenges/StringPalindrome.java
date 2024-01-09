@@ -1,4 +1,4 @@
-package com.string.challenge;
+package com.string.challenges;
 
 public class StringPalindrome {
 
