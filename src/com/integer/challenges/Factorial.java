@@ -1,17 +1,6 @@
 package com.integer.challenges;
 
-public class Factorial {
-	
-	/*
-	 * 
-	 * The Fibonacci series is a series where the next term is the sum of the
-	 * previous two terms.
-	 * 
-	 * The first two terms of the Fibonacci sequence are 0 followed by 1
-	 * 
-	 *  Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
-	 * 
-	 */
+public class Factorial {	
 	
 	public static void main(String[] args) {
 		System.out.println(factorial(5));
