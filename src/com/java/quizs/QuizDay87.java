@@ -1,4 +1,4 @@
-package com.integer.challenges;
+package com.java.quizs;
 
 public class QuizDay87 {
 
