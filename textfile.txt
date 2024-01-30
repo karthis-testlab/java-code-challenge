@@ -1,0 +1,5 @@
+A user clicks on a URL, and due to slow internet connection/inadequate website optimization/heavy website content/any other reason, the web page takes a while to load. Obviously, the user would wait for the page to load before clicking on a button, link, or image to continue their browsing journey.
+
+In automation testing, all possible (or at least a larger number of) user scenarios must be automated so that QAs can monitor how the website would act in the real world. The scenario detailed above must also be automated for the same reason.
+
+Given that Selenium is the most popular automated testing framework in global usage, this article will explore how QAs can use Selenium to wait for a page to load during an automated test.
