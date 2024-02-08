@@ -102,6 +102,7 @@ public class FindSquares {
 	 * Time Complexity : O[n/2] --> Best Case // O[n] --> Worst Case
 	 * Space Complexity: O[n]
 	 */
+	@SuppressWarnings("unused")
 	private int[] squareAndSort(int[] nums) {
 		int[] squared = new int[nums.length];
 		int left = 0, right = nums.length - 1;
