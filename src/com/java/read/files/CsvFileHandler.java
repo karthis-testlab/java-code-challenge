@@ -23,8 +23,8 @@ public class CsvFileHandler {
 		try {
 			csvWriter = new FileWriter(fileFolder);
 
-			csvWriter.append("baseUrl, testUrl, threshold, status \n");
-			csvWriter.append("http://localhost:8080/indexA.html, http://localhost:8080/indexA.html, 0.01, NA \n");
+			csvWriter.append("baseUrl,testUrl,threshold,status\n");
+			csvWriter.append("http://localhost:8080/indexA.html,http://localhost:8080/indexA.html,0.01,NA\n");
 
 			csvWriter.close();
 
