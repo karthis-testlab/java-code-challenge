@@ -1,4 +1,4 @@
-package com.string.challenges;
+package com.java.file.handlers;
 
 public class PrintCurrentJavaVersionInSystem {
 
