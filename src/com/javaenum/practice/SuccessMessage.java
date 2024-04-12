@@ -42,7 +42,6 @@ public enum SuccessMessage {
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + this);
 		}
-	}
-	
+	}	
 
 }
