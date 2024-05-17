@@ -12,6 +12,7 @@ public class QuizDay28 {
 		obj.add("B");
 		obj.add(1, "C");
 		obj.add("D");
+		obj.add(3, "c");
 		System.out.println(obj);
 	}
 
