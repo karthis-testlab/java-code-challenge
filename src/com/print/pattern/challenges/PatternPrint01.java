@@ -1,6 +1,6 @@
-package com.string.challenges;
+package com.print.pattern.challenges;
 
-public class PatternPrint {
+public class PatternPrint01 {
 
 	public static void main(String[] args) {		
 		for (int i = 0; i < 5; i++) {
