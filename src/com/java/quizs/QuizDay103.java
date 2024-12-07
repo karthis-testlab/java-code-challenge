@@ -3,8 +3,11 @@ package com.java.quizs;
 public class QuizDay103 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int x = 15;
+		if (x++ > 15 && x++ ==17) {
+			x++;
+		}
+		System.out.println(x);
 	}
 
 }
