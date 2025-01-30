@@ -1,10 +1,13 @@
 package com.java.cls.examples;
 
-public class Main {
+public class Main extends A {
+	
+	static {
+		System.out.println("Static block in Main");
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new Main();
 	}
 
 }
