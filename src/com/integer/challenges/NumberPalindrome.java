@@ -26,8 +26,7 @@ public class NumberPalindrome {
 
 	}
 	
-	boolean isPalindrome(int number) {
-		
+	boolean isPalindrome(int number) {		
 		if(number == reverseNumber(number)) {
 			return true;
 		}
