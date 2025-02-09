@@ -29,8 +29,7 @@ public class NumberPalindrome {
 	boolean isPalindrome(int number) {		
 		if(number == reverseNumber(number)) {
 			return true;
-		}
-			
+		}			
 		return false;
 	}
 
