@@ -7,7 +7,6 @@ public class RightShiftOperator {
 		System.out.println(a >> 2);
 		System.out.println(a >> 15);
 		System.out.println(a >> 16);
-		System.out.println(a << 16);
 	}
 
 }
